@@ -1,8 +1,8 @@
-# == Class base::install
+# == Class base::packages
 #
-# This class is called from base for install.
+# This class is called from base for packages.
 #
-class base::install {
+class base::packages {
 
   package { $::base::general_packages:
     ensure => present,
