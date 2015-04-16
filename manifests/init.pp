@@ -31,6 +31,9 @@ class base (
     notify => Service['ssh']
   } ->
   service { 'ssh': ensure => running } ->
+  class { 'timezone':
+        timezone => 'America/Los_Angeles',
+  } ->
   Class['::base']
 
 }
