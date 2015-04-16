@@ -18,7 +18,7 @@ class base (
   class { '::base::config': } ->
   class { 'sudo': } ->
   class { 'timezone':
-        timezone => 'America/Los_Angeles',
+        timezone => 'UTC',
   } ->
   Class['::base']
 
