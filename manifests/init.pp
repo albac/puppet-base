@@ -22,14 +22,9 @@ class base (
   } ->
   Class['::base']
 
-  sudo::conf { 'sudoers':
+  sudo::conf { 'sudo_admins':
     priority => 10,
     content  => "%sudoers ALL=(ALL) NOPASSWD: ALL",
-  }
-
-  sudo::conf { 'ubuntu':
-    priority => 10,
-    content  => "ubuntu ALL=(ALL) NOPASSWD: ALL",
   }
 
   sshd_config { "PasswordAuthentication":

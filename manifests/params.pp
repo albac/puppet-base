@@ -5,17 +5,17 @@
 #
 class base::params {
 
-  $general_packages = ['telnet','locate','screen','htop','vim']
+  $general_packages = ['telnet','screen','htop','vim']
 
   case $::osfamily {
     'Debian': {
-      $package_name = ['mailutils']
+      $package_name = ['mailutils','locate']
     }
     'RedHat': {
       $package_name = ['redhat-lsb']
     }
     'Linux': {
-      $package_name = ['redhat-lsb','mailx']
+      $package_name = ['redhat-lsb','mailx','mlocate','nfs-utils']
     }
     default: {
       fail("${::operatingsystem} not supported")
