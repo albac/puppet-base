@@ -13,7 +13,8 @@ class base::params {
       $ssh_service  = 'ssh'
     }
     'RedHat': {
-      $package_name = ['redhat-lsb']
+      $package_name = ['redhat-lsb','mailx','mlocate','nfs-utils','vim-common','vim-enhanced']
+      $ssh_service  = 'sshd'
     }
     'Linux': {
       $package_name = ['redhat-lsb','mailx','mlocate','nfs-utils','vim-common','vim-enhanced']
