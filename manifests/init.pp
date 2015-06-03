@@ -23,6 +23,7 @@ class base (
   class { 'timezone':
         timezone => 'UTC',
   } ->
+  class { '::base::cis'} ->
   Class['::base']
 
   sudo::conf { 'sudo_admins':
