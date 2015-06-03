@@ -10,12 +10,14 @@ class base::params {
   case $::osfamily {
     'Debian': {
       $package_name = ['mailutils','locate','vim']
+      $ssh_service  = 'ssh'
     }
     'RedHat': {
       $package_name = ['redhat-lsb']
     }
     'Linux': {
       $package_name = ['redhat-lsb','mailx','mlocate','nfs-utils','vim-common','vim-enhanced']
+      $ssh_service  = 'sshd'
     }
     default: {
       fail("${::operatingsystem} not supported")

@@ -30,9 +30,9 @@ class base (
   sshd_config { "PasswordAuthentication":
     ensure => present,
     value  => "yes",
-    notify => Service['ssh']
+    notify => Service[ $ssh_service ]
   }
 
-  service { 'ssh': ensure => running }
+  service { $ssh_service : ensure => running }
 
 }
