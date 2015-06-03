@@ -10,7 +10,10 @@
 class base (
   $package_name = $::base::params::package_name,
   $service_name = $::base::params::service_name,
+  $ssh_service  = $::base::params::ssh_service,
 ) inherits ::base::params {
+
+  validate_re($ssh_service,'^.+$')
 
   # validate parameters here
 
