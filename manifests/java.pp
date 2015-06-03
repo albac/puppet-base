@@ -2,11 +2,11 @@
 #
 # This class is called from base for service java.
 #
-class base::java(
-$ensure=present,
+class base::java (
+$ensure   = present,
+$arch     = 'x64',
+$apps_dir = '/opt/apps',
 $version,
-$arch="x64",
-$apps_dir='/opt/apps'
 ){
 
   $deployment_dir="${apps_dir}/${version}"
