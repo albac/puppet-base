@@ -5,7 +5,7 @@
 #
 class base::params {
 
-  $general_packages = ['telnet','screen','htop']
+  $general_packages = ['screen','htop']
 
   case $::osfamily {
     'Debian': {
