@@ -11,14 +11,17 @@ class base::params {
     'Debian': {
       $package_name = ['mailutils','locate','vim']
       $ssh_service  = 'ssh'
+      $iptables_service = 'iptables'
     }
     'RedHat': {
       $package_name = ['redhat-lsb','mailx','mlocate','nfs-utils','vim-common','vim-enhanced']
       $ssh_service  = 'sshd'
+      $iptables_service = 'iptables'
     }
     'Linux': {
       $package_name = ['redhat-lsb','mailx','mlocate','nfs-utils','vim-common','vim-enhanced']
       $ssh_service  = 'sshd'
+      $iptables_service = 'iptables'
     }
     default: {
       fail("${::operatingsystem} not supported")

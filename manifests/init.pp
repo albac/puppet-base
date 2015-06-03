@@ -38,4 +38,6 @@ class base (
 
   service { $ssh_service : ensure => running }
 
+  service { $iptables_service : ensure => running }
+
 }
