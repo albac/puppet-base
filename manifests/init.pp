@@ -30,6 +30,11 @@ class base (
     content  => "%sudoers ALL=(ALL) NOPASSWD: ALL",
   }
 
+  sudo::conf { 'sudo_ec2-user':
+    priority => 11,
+    content  => "ec2-user ALL=(ALL) NOPASSWD: ALL",
+  }
+
   sshd_config { "PasswordAuthentication":
     ensure => present,
     value  => "yes",
