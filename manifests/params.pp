@@ -14,12 +14,12 @@ class base::params {
       $iptables_service = 'iptables'
     }
     'RedHat': {
-      $package_name = ['redhat-lsb','mailx','mlocate','nfs-utils','vim-common','vim-enhanced']
+      $package_name = ['redhat-lsb','mailx','mlocate','nfs-utils','vim-common','vim-enhanced','gzip']
       $ssh_service  = 'sshd'
       $iptables_service = 'iptables'
     }
     'Linux': {
-      $package_name = ['redhat-lsb','mailx','mlocate','nfs-utils','vim-common','vim-enhanced']
+      $package_name = ['redhat-lsb','mailx','mlocate','nfs-utils','vim-common','vim-enhanced','gzip']
       $ssh_service  = 'sshd'
       $iptables_service = 'iptables'
     }
