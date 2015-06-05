@@ -14,7 +14,7 @@ class base::params {
       $iptables_service = 'iptables'
     }
     'RedHat': {
-      $package_name = ['redhat-lsb','mailx','mlocate','nfs-utils','vim-common','vim-enhanced','gzip','pam_krb5','sudo','authconfig','samba3','samba3-winbind']
+      $package_name = ['redhat-lsb','mailx','mlocate','nfs-utils','vim-common','vim-enhanced','gzip','pam_krb5','authconfig','samba3','samba3-winbind']
       $ssh_service  = 'sshd'
       $iptables_service = 'iptables'
     }
