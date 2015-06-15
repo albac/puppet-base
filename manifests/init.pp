@@ -25,9 +25,9 @@ class base (
   } ->
   Class['::base']
 
-  sudo::conf { 'sudo_admins':
+  sudo::conf { 'vagrant':
     priority => 10,
-    content  => "%sudoers ALL=(ALL) NOPASSWD: ALL",
+    content  => "%vagrant ALL=(ALL) NOPASSWD: ALL",
   }
 
   sshd_config { "PasswordAuthentication":
