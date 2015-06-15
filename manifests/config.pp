@@ -6,10 +6,4 @@ class base::config {
 
   #This is needed because the way Amazon AMI is partioned by default
 
-  file {'/etc/krb5.keytab':
-    mode  => 0700,
-    owner => root,
-    group => root,
-  }
-
 }
